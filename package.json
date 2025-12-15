@@ -1,0 +1,24 @@
+{
+  "name": "olbasecomponents.github.io",
+  "version": "1.0.0",
+  "description": "交互式命令行方式自动生成联调好的CRUD页面",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/time202051/olBaseComponents.github.io.git"
+  },
+  "author": "lijiapeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/time202051/olBaseComponents.github.io/issues"
+  },
+  "homepage": "https://github.com/time202051/olBaseComponents.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.10"
+  }
+}
