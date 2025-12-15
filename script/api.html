@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API 脚本 - api.js | ol-base-components</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/logo.svg">
+    <meta name="description" content="基于 Element-UI 的高效表格、表单、搜索、弹框等通用组件，支持 Swagger 自动生成表头，npx 脚本一键生成 API">
+    
+    <link rel="preload" href="/assets/css/0.styles.f3e2e2a4.css" as="style"><link rel="preload" href="/assets/js/app.2c661504.js" as="script"><link rel="preload" href="/assets/js/2.81c34002.js" as="script"><link rel="preload" href="/assets/js/1.9918cdf1.js" as="script"><link rel="preload" href="/assets/js/32.415a5b82.js" as="script"><link rel="prefetch" href="/assets/js/10.18e280b2.js"><link rel="prefetch" href="/assets/js/11.532fb960.js"><link rel="prefetch" href="/assets/js/12.67238036.js"><link rel="prefetch" href="/assets/js/13.d9bc12e0.js"><link rel="prefetch" href="/assets/js/14.c1e18cc4.js"><link rel="prefetch" href="/assets/js/15.fbba562b.js"><link rel="prefetch" href="/assets/js/16.4574fd2a.js"><link rel="prefetch" href="/assets/js/17.9e69dfdb.js"><link rel="prefetch" href="/assets/js/18.99e6bfc2.js"><link rel="prefetch" href="/assets/js/19.58d0e401.js"><link rel="prefetch" href="/assets/js/20.d718e0a8.js"><link rel="prefetch" href="/assets/js/21.4d2eb33f.js"><link rel="prefetch" href="/assets/js/22.8ca60b7a.js"><link rel="prefetch" href="/assets/js/23.0b74b427.js"><link rel="prefetch" href="/assets/js/24.1271f787.js"><link rel="prefetch" href="/assets/js/25.3a9ae847.js"><link rel="prefetch" href="/assets/js/26.f5cf41c3.js"><link rel="prefetch" href="/assets/js/27.82c19040.js"><link rel="prefetch" href="/assets/js/28.10732ea2.js"><link rel="prefetch" href="/assets/js/29.18655a78.js"><link rel="prefetch" href="/assets/js/3.244f0799.js"><link rel="prefetch" href="/assets/js/30.10b3ebec.js"><link rel="prefetch" href="/assets/js/31.63d80d2a.js"><link rel="prefetch" href="/assets/js/33.0c62d11b.js"><link rel="prefetch" href="/assets/js/34.c981fb96.js"><link rel="prefetch" href="/assets/js/35.8a25dc1e.js"><link rel="prefetch" href="/assets/js/4.db06a48d.js"><link rel="prefetch" href="/assets/js/5.caca6451.js"><link rel="prefetch" href="/assets/js/6.963cb6f5.js"><link rel="prefetch" href="/assets/js/7.f5c742a4.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.cc58001a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f3e2e2a4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.svg" alt="ol-base-components" class="logo"> <span class="site-name can-hide">ol-base-components</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/guide/what-is-ol-base.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="脚本" class="dropdown-title"><span class="title">脚本</span> <span class="arrow down"></span></button> <button type="button" aria-label="脚本" class="mobile-dropdown-title"><span class="title">脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/script/api.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  api
+</a></li><li class="dropdown-item"><!----> <a href="/script/run.html" class="nav-link">
+  run
+</a></li><li class="dropdown-item"><!----> <a href="/script/init.html" class="nav-link">
+  init
+</a></li><li class="dropdown-item"><!----> <a href="/script/add.html" class="nav-link">
+  add
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="推荐连接" class="dropdown-title"><span class="title">推荐连接</span> <span class="arrow down"></span></button> <button type="button" aria-label="推荐连接" class="mobile-dropdown-title"><span class="title">推荐连接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/copyEncryptionCracking/" class="nav-link">
+  copy encryption cracking 破解复制加密
+</a></li></ul></div></div> <a href="https://github.com/time202051/base-component" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/guide/what-is-ol-base.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="脚本" class="dropdown-title"><span class="title">脚本</span> <span class="arrow down"></span></button> <button type="button" aria-label="脚本" class="mobile-dropdown-title"><span class="title">脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/script/api.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  api
+</a></li><li class="dropdown-item"><!----> <a href="/script/run.html" class="nav-link">
+  run
+</a></li><li class="dropdown-item"><!----> <a href="/script/init.html" class="nav-link">
+  init
+</a></li><li class="dropdown-item"><!----> <a href="/script/add.html" class="nav-link">
+  add
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="推荐连接" class="dropdown-title"><span class="title">推荐连接</span> <span class="arrow down"></span></button> <button type="button" aria-label="推荐连接" class="mobile-dropdown-title"><span class="title">推荐连接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/copyEncryptionCracking/" class="nav-link">
+  copy encryption cracking 破解复制加密
+</a></li></ul></div></div> <a href="https://github.com/time202051/base-component" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/script/api.html" aria-current="page" class="active sidebar-link">api</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/script/api.html#功能特性" class="sidebar-link">功能特性</a></li><li class="sidebar-sub-header"><a href="/script/api.html#基础用法" class="sidebar-link">基础用法</a></li><li class="sidebar-sub-header"><a href="/script/api.html#生成的文件结构" class="sidebar-link">生成的文件结构</a></li><li class="sidebar-sub-header"><a href="/script/api.html#类型转换规则" class="sidebar-link">类型转换规则</a></li><li class="sidebar-sub-header"><a href="/script/api.html#url-转换规则" class="sidebar-link">URL 转换规则</a></li><li class="sidebar-sub-header"><a href="/script/api.html#生成的文件特性" class="sidebar-link">生成的文件特性</a></li><li class="sidebar-sub-header"><a href="/script/api.html#使用示例" class="sidebar-link">使用示例</a></li><li class="sidebar-sub-header"><a href="/script/api.html#注意事项" class="sidebar-link">注意事项</a></li><li class="sidebar-sub-header"><a href="/script/api.html#常见问题" class="sidebar-link">常见问题</a></li><li class="sidebar-sub-header"><a href="/script/api.html#最佳实践" class="sidebar-link">最佳实践</a></li><li class="sidebar-sub-header"><a href="/script/api.html#相关链接" class="sidebar-link">相关链接</a></li></ul></li><li><a href="/script/run.html" class="sidebar-link">run</a></li><li><a href="/script/init.html" class="sidebar-link">init</a></li><li><a href="/script/add.html" class="sidebar-link">add</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="api-脚本-api-js"><a href="#api-脚本-api-js" class="header-anchor">#</a> API 脚本 - api.js</h1> <p><code>api.js</code> 脚本用于从指定的 Swagger URL 获取 API 数据，并生成相应的 API 模块文件，包含完整的 JSDoc 注释，方便查看接口入参及类型。</p> <h2 id="功能特性"><a href="#功能特性" class="header-anchor">#</a> 功能特性</h2> <ul><li><strong>自动生成</strong>：根据 Swagger 文档自动生成 API 接口文件</li> <li><strong>JSDoc 支持</strong>：完整的参数类型注释和说明</li> <li><strong>模块化管理</strong>：按 Swagger tags 分组生成模块文件</li> <li><strong>类型安全</strong>：自动转换 Java 类型到 JavaScript 类型</li> <li><strong>路径参数处理</strong>：自动处理 RESTful 路径参数</li> <li><strong>只读保护</strong>：生成的文件自动设置为只读，防止误修改</li></ul> <h2 id="基础用法"><a href="#基础用法" class="header-anchor">#</a> 基础用法</h2> <h3 id="_1-基本命令"><a href="#_1-基本命令" class="header-anchor">#</a> 1. 基本命令</h3> <p><strong>使用格式：</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>npx api <span class="token operator">&lt;</span>swaggerUrl<span class="token operator">&gt;</span> <span class="token punctuation">[</span>outputPath<span class="token punctuation">]</span>
+</code></pre></div><p><strong>案例：</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 基本用法</span>
+npx api http://your-api-domain
+
+<span class="token comment"># 指定输出路径</span>
+npx api http://your-api-domain ./src/api/modules
+
+<span class="token comment"># 完整示例</span>
+npx api http://192.168.1.100:8080 ./src/api/modules
+</code></pre></div><h3 id="_2-参数说明"><a href="#_2-参数说明" class="header-anchor">#</a> 2. 参数说明</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>必填</th> <th>默认值</th></tr></thead> <tbody><tr><td><code>swaggerUrl</code></td> <td>Swagger API 的基础 URL</td> <td>string</td> <td>✅</td> <td>—</td></tr> <tr><td><code>outputPath</code></td> <td>生成文件的输出路径</td> <td>string</td> <td>❌</td> <td><code>src/api/modules</code></td></tr></tbody></table> <h2 id="生成的文件结构"><a href="#生成的文件结构" class="header-anchor">#</a> 生成的文件结构</h2> <p>执行脚本后，会在指定目录下生成以下文件：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>src/api/modules/
+├── index.js <span class="token comment"># 模块导出入口文件</span>
+├── UserApi.js <span class="token comment"># 用户相关 API</span>
+├── OrderApi.js <span class="token comment"># 订单相关 API</span>
+├── ProductApi.js <span class="token comment"># 产品相关 API</span>
+└── <span class="token punctuation">..</span>. <span class="token comment"># 其他模块文件</span>
+</code></pre></div><h3 id="示例生成的文件内容"><a href="#示例生成的文件内容" class="header-anchor">#</a> 示例生成的文件内容</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * ⚠️  警告：此文件由脚本自动生成，请勿手动编辑！
+ *  如需修改，请重新运行生成脚本
+ *  生成时间: 2024-01-15 10:30:00
+ */</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> api <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@/api/request/sendRuest&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 获取用户列表
+ * @param {Object} params - 请求参数
+ * @param {string} params.name - 用户姓名
+ * @param {string} [params.email] - 用户邮箱
+ * @param {number} params.page - 页码
+ * @param {number} params.size - 每页大小
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getUserList</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">params<span class="token punctuation">,</span> options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">api</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api/app/user/list</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span>
+    params<span class="token punctuation">,</span>
+    <span class="token operator">...</span>options<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 创建用户
+ * @param {Object} body - 请求参数
+ * @param {string} body.name - 用户姓名
+ * @param {string} body.email - 用户邮箱
+ * @param {number} body.age - 用户年龄
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">createUser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">body<span class="token punctuation">,</span> options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">api</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api/app/user/create</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;post&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">data</span><span class="token operator">:</span> body<span class="token punctuation">,</span>
+    <span class="token operator">...</span>options<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 根据ID获取用户详情
+ * @param {string} userId - 用户ID
+ * @param {Object} options - 请求选项
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getUserById</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">userId<span class="token punctuation">,</span> options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">api</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/api/app/user/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>options<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="效果图"><a href="#效果图" class="header-anchor">#</a> 效果图</h3> <p><img src="/assets/api.png" alt="效果图"></p> <h2 id="类型转换规则"><a href="#类型转换规则" class="header-anchor">#</a> 类型转换规则</h2> <p>脚本会自动将 Java 类型转换为 JavaScript 类型：</p> <table><thead><tr><th>Java 类型</th> <th>JavaScript 类型</th> <th>说明</th></tr></thead> <tbody><tr><td><code>integer</code></td> <td><code>number</code></td> <td>整数类型</td></tr> <tr><td><code>string</code></td> <td><code>string</code></td> <td>字符串类型</td></tr> <tr><td><code>boolean</code></td> <td><code>boolean</code></td> <td>布尔类型</td></tr> <tr><td><code>array</code></td> <td><code>Array</code></td> <td>数组类型</td></tr> <tr><td><code>object</code></td> <td><code>Object</code></td> <td>对象类型</td></tr> <tr><td><code>date-time</code></td> <td><code>string</code></td> <td>日期时间类型</td></tr></tbody></table> <h2 id="url-转换规则"><a href="#url-转换规则" class="header-anchor">#</a> URL 转换规则</h2> <p>脚本会自动处理 URL 路径，生成合适的函数名：</p> <table><thead><tr><th>原始 URL</th> <th>生成的方法名</th> <th>说明</th></tr></thead> <tbody><tr><td><code>/api/app/user/list</code></td> <td><code>getUserList</code></td> <td>获取用户列表</td></tr> <tr><td><code>/api/app/user/{id}</code></td> <td><code>getUserById</code></td> <td>根据 ID 获取用户</td></tr> <tr><td><code>/api/app/order/create</code></td> <td><code>postOrderCreate</code></td> <td>创建订单</td></tr> <tr><td><code>/api/app/product/{id}/update</code></td> <td><code>putProductByIdUpdate</code></td> <td>更新产品</td></tr></tbody></table> <h3 id="转换规则说明"><a href="#转换规则说明" class="header-anchor">#</a> 转换规则说明</h3> <ol><li><strong>移除前缀</strong>：自动移除 <code>/api/app</code> 前缀</li> <li><strong>处理路径参数</strong>：<code>{id}</code> 转换为 <code>ById</code></li> <li><strong>驼峰命名</strong>：使用驼峰命名法生成方法名</li> <li><strong>HTTP 方法前缀</strong>：添加 <code>get</code>、<code>post</code>、<code>put</code>、<code>delete</code> 前缀</li></ol> <h2 id="生成的文件特性"><a href="#生成的文件特性" class="header-anchor">#</a> 生成的文件特性</h2> <h3 id="_1-自动注释"><a href="#_1-自动注释" class="header-anchor">#</a> 1. 自动注释</h3> <p>每个生成的函数都包含完整的 JSDoc 注释：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 获取用户列表
+ * @param {Object} params - 请求参数
+ * @param {string} params.name - 用户姓名
+ * @param {number} [params.age] - 用户年龄（可选）
+ * @param {Object} options - 请求选项
+ * @returns {Promise} 返回用户列表数据
+ */</span>
+</code></pre></div><h3 id="_2-参数验证"><a href="#_2-参数验证" class="header-anchor">#</a> 2. 参数验证</h3> <p>自动识别必填和可选参数：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 必填参数</span>
+@param <span class="token punctuation">{</span>string<span class="token punctuation">}</span> params<span class="token punctuation">.</span>name <span class="token operator">-</span> 用户姓名
+
+<span class="token comment">// 可选参数</span>
+@param <span class="token punctuation">{</span>string<span class="token punctuation">}</span> <span class="token punctuation">[</span>params<span class="token punctuation">.</span>email<span class="token punctuation">]</span> <span class="token operator">-</span> 用户邮箱
+</code></pre></div><h3 id="_3-类型安全"><a href="#_3-类型安全" class="header-anchor">#</a> 3. 类型安全</h3> <p>自动转换数据类型，提供类型提示：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>@param <span class="token punctuation">{</span>number<span class="token punctuation">}</span> params<span class="token punctuation">.</span>page <span class="token operator">-</span> 页码
+@param <span class="token punctuation">{</span>string<span class="token punctuation">}</span> params<span class="token punctuation">.</span>name <span class="token operator">-</span> 用户姓名
+@param <span class="token punctuation">{</span>boolean<span class="token punctuation">}</span> params<span class="token punctuation">.</span>active <span class="token operator">-</span> 是否激活
+</code></pre></div><h3 id="_4-只读保护"><a href="#_4-只读保护" class="header-anchor">#</a> 4. 只读保护</h3> <p>生成的文件自动设置为只读，防止误修改：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 文件权限为 444（只读）</span>
+-r--r--r-- <span class="token number">1</span> user group <span class="token number">1024</span> Jan <span class="token number">15</span> <span class="token number">10</span>:30 UserApi.js
+</code></pre></div><h2 id="使用示例"><a href="#使用示例" class="header-anchor">#</a> 使用示例</h2> <h3 id="_1-在-vue-组件中使用"><a href="#_1-在-vue-组件中使用" class="header-anchor">#</a> 1. 在 Vue 组件中使用</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol-table</span>
+      <span class="token attr-name">:url</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>swaggerUrl.getUserList<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:table-data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>tableData<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:paginations</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>paginations<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> UserApi <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@/api/modules&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">swaggerUrl</span><span class="token operator">:</span> UserApi<span class="token punctuation">,</span>
+      <span class="token literal-property property">tableData</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">rows</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">columns</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">paginations</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">page</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">total</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">limit</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">getTableData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">Page</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>paginations<span class="token punctuation">.</span>page<span class="token punctuation">,</span>
+          <span class="token literal-property property">MaxResultCount</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>paginations<span class="token punctuation">.</span>limit<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> result <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>swaggerUrl<span class="token punctuation">.</span><span class="token function">getUserList</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>tableData<span class="token punctuation">.</span>rows <span class="token operator">=</span> result<span class="token punctuation">.</span>items <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>paginations<span class="token punctuation">.</span>total <span class="token operator">=</span> result<span class="token punctuation">.</span>totalCount <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;获取数据失败:&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getTableData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_2-在-javascript-中使用"><a href="#_2-在-javascript-中使用" class="header-anchor">#</a> 2. 在 JavaScript 中使用</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> UserApi<span class="token punctuation">,</span> OrderApi <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@/api/modules&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 获取用户列表</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getUserList</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> UserApi<span class="token punctuation">.</span><span class="token function">getUserList</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">page</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">size</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;用户列表:&quot;</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;获取用户列表失败:&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建用户</span>
+<span class="token keyword">const</span> <span class="token function-variable function">createUser</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">userData</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> UserApi<span class="token punctuation">.</span><span class="token function">createUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">email</span><span class="token operator">:</span> <span class="token string">&quot;lisi@example.com&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;创建用户成功:&quot;</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;创建用户失败:&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 获取订单详情</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getOrderDetail</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">orderId</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> OrderApi<span class="token punctuation">.</span><span class="token function">getOrderById</span><span class="token punctuation">(</span>orderId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;订单详情:&quot;</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;获取订单详情失败:&quot;</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="注意事项"><a href="#注意事项" class="header-anchor">#</a> 注意事项</h2> <h3 id="_1-网络连接"><a href="#_1-网络连接" class="header-anchor">#</a> 1. 网络连接</h3> <p>确保能够访问 Swagger URL：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 测试网络连接</span>
+<span class="token function">curl</span> http://your-api-domain/swagger/v1/swagger.json
+</code></pre></div><h3 id="_2-swagger-格式"><a href="#_2-swagger-格式" class="header-anchor">#</a> 2. Swagger 格式</h3> <p>确保 Swagger 文档格式正确：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;swagger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;info&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;API Documentation&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;paths&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;/api/app/user/list&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;get&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;tags&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;User&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;summary&quot;</span><span class="token operator">:</span> <span class="token string">&quot;获取用户列表&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;parameters&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;query&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;用户姓名&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h2> <h3 id="q-脚本执行失败怎么办"><a href="#q-脚本执行失败怎么办" class="header-anchor">#</a> Q: 脚本执行失败怎么办？</h3> <p>A: 检查以下几点：</p> <ol><li>确保 Swagger URL 可访问</li> <li>检查网络连接</li> <li>确保已安装 <code>swagger-client</code> 依赖</li> <li>检查输出目录是否有写入权限</li></ol> <h2 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h2> <ol><li><strong>定期更新</strong>：API 变更后及时重新生成文件</li> <li><strong>版本管理</strong>：为不同环境生成不同的 API 文件</li> <li><strong>文档同步</strong>：确保 Swagger 文档与实际 API 一致</li> <li><strong>类型安全</strong>：充分利用 JSDoc 提供的类型提示</li> <li><strong>错误处理</strong>：在调用 API 时添加适当的错误处理</li> <li><strong>性能优化</strong>：合理使用缓存和请求合并</li></ol> <h2 id="相关链接"><a href="#相关链接" class="header-anchor">#</a> 相关链接</h2> <ul><li><a href="https://github.com/time202051/base-component" target="_blank" rel="noopener noreferrer">ol-base-components 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://jsdoc.app/" target="_blank" rel="noopener noreferrer">JSDoc 官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <hr> <p><strong>通过 api.js 脚本，你可以快速生成类型安全的 API 接口文件，提升开发效率！</strong> 🚀</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">12/15/2025, 8:01:28 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/script/run.html">
+        run
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c661504.js" defer></script><script src="/assets/js/2.81c34002.js" defer></script><script src="/assets/js/1.9918cdf1.js" defer></script><script src="/assets/js/32.415a5b82.js" defer></script>
+  </body>
+</html>

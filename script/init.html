@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API 脚本 - init.js | ol-base-components</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/logo.svg">
+    <meta name="description" content="基于 Element-UI 的高效表格、表单、搜索、弹框等通用组件，支持 Swagger 自动生成表头，npx 脚本一键生成 API">
+    
+    <link rel="preload" href="/assets/css/0.styles.f3e2e2a4.css" as="style"><link rel="preload" href="/assets/js/app.2c661504.js" as="script"><link rel="preload" href="/assets/js/2.81c34002.js" as="script"><link rel="preload" href="/assets/js/1.9918cdf1.js" as="script"><link rel="preload" href="/assets/js/33.0c62d11b.js" as="script"><link rel="prefetch" href="/assets/js/10.18e280b2.js"><link rel="prefetch" href="/assets/js/11.532fb960.js"><link rel="prefetch" href="/assets/js/12.67238036.js"><link rel="prefetch" href="/assets/js/13.d9bc12e0.js"><link rel="prefetch" href="/assets/js/14.c1e18cc4.js"><link rel="prefetch" href="/assets/js/15.fbba562b.js"><link rel="prefetch" href="/assets/js/16.4574fd2a.js"><link rel="prefetch" href="/assets/js/17.9e69dfdb.js"><link rel="prefetch" href="/assets/js/18.99e6bfc2.js"><link rel="prefetch" href="/assets/js/19.58d0e401.js"><link rel="prefetch" href="/assets/js/20.d718e0a8.js"><link rel="prefetch" href="/assets/js/21.4d2eb33f.js"><link rel="prefetch" href="/assets/js/22.8ca60b7a.js"><link rel="prefetch" href="/assets/js/23.0b74b427.js"><link rel="prefetch" href="/assets/js/24.1271f787.js"><link rel="prefetch" href="/assets/js/25.3a9ae847.js"><link rel="prefetch" href="/assets/js/26.f5cf41c3.js"><link rel="prefetch" href="/assets/js/27.82c19040.js"><link rel="prefetch" href="/assets/js/28.10732ea2.js"><link rel="prefetch" href="/assets/js/29.18655a78.js"><link rel="prefetch" href="/assets/js/3.244f0799.js"><link rel="prefetch" href="/assets/js/30.10b3ebec.js"><link rel="prefetch" href="/assets/js/31.63d80d2a.js"><link rel="prefetch" href="/assets/js/32.415a5b82.js"><link rel="prefetch" href="/assets/js/34.c981fb96.js"><link rel="prefetch" href="/assets/js/35.8a25dc1e.js"><link rel="prefetch" href="/assets/js/4.db06a48d.js"><link rel="prefetch" href="/assets/js/5.caca6451.js"><link rel="prefetch" href="/assets/js/6.963cb6f5.js"><link rel="prefetch" href="/assets/js/7.f5c742a4.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.cc58001a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f3e2e2a4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.svg" alt="ol-base-components" class="logo"> <span class="site-name can-hide">ol-base-components</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/guide/what-is-ol-base.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="脚本" class="dropdown-title"><span class="title">脚本</span> <span class="arrow down"></span></button> <button type="button" aria-label="脚本" class="mobile-dropdown-title"><span class="title">脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/script/api.html" class="nav-link">
+  api
+</a></li><li class="dropdown-item"><!----> <a href="/script/run.html" class="nav-link">
+  run
+</a></li><li class="dropdown-item"><!----> <a href="/script/init.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  init
+</a></li><li class="dropdown-item"><!----> <a href="/script/add.html" class="nav-link">
+  add
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="推荐连接" class="dropdown-title"><span class="title">推荐连接</span> <span class="arrow down"></span></button> <button type="button" aria-label="推荐连接" class="mobile-dropdown-title"><span class="title">推荐连接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/copyEncryptionCracking/" class="nav-link">
+  copy encryption cracking 破解复制加密
+</a></li></ul></div></div> <a href="https://github.com/time202051/base-component" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/guide/what-is-ol-base.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="脚本" class="dropdown-title"><span class="title">脚本</span> <span class="arrow down"></span></button> <button type="button" aria-label="脚本" class="mobile-dropdown-title"><span class="title">脚本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/script/api.html" class="nav-link">
+  api
+</a></li><li class="dropdown-item"><!----> <a href="/script/run.html" class="nav-link">
+  run
+</a></li><li class="dropdown-item"><!----> <a href="/script/init.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  init
+</a></li><li class="dropdown-item"><!----> <a href="/script/add.html" class="nav-link">
+  add
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="推荐连接" class="dropdown-title"><span class="title">推荐连接</span> <span class="arrow down"></span></button> <button type="button" aria-label="推荐连接" class="mobile-dropdown-title"><span class="title">推荐连接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/copyEncryptionCracking/" class="nav-link">
+  copy encryption cracking 破解复制加密
+</a></li></ul></div></div> <a href="https://github.com/time202051/base-component" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/script/api.html" class="sidebar-link">api</a></li><li><a href="/script/run.html" class="sidebar-link">run</a></li><li><a href="/script/init.html" aria-current="page" class="active sidebar-link">init</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/script/init.html#功能特性" class="sidebar-link">功能特性</a></li><li class="sidebar-sub-header"><a href="/script/init.html#基础用法" class="sidebar-link">基础用法</a></li><li class="sidebar-sub-header"><a href="/script/init.html#生成的文件结构" class="sidebar-link">生成的文件结构</a></li><li class="sidebar-sub-header"><a href="/script/init.html#执行流程" class="sidebar-link">执行流程</a></li><li class="sidebar-sub-header"><a href="/script/init.html#常见问题" class="sidebar-link">常见问题</a></li><li class="sidebar-sub-header"><a href="/script/init.html#最佳实践" class="sidebar-link">最佳实践</a></li><li class="sidebar-sub-header"><a href="/script/init.html#与其他脚本的区别" class="sidebar-link">与其他脚本的区别</a></li><li class="sidebar-sub-header"><a href="/script/init.html#相关链接" class="sidebar-link">相关链接</a></li></ul></li><li><a href="/script/add.html" class="sidebar-link">add</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="api-脚本-init-js"><a href="#api-脚本-init-js" class="header-anchor">#</a> API 脚本 - init.js</h1> <p><code>init.js</code> 脚本是 <code>api.js</code> 和 <code>run.js</code> 的组合命令，一次性执行两个脚本，生成完整的 API 接口文件和路径映射文件。</p> <h2 id="功能特性"><a href="#功能特性" class="header-anchor">#</a> 功能特性</h2> <ul><li><strong>一键生成</strong>：同时执行 api.js 和 run.js 脚本</li> <li><strong>完整配置</strong>：生成 API 函数和路径映射文件</li> <li><strong>自动化流程</strong>：按顺序执行，确保文件一致性</li> <li><strong>错误处理</strong>：完善的错误处理和状态提示</li> <li><strong>进度显示</strong>：实时显示执行进度和状态</li></ul> <h2 id="基础用法"><a href="#基础用法" class="header-anchor">#</a> 基础用法</h2> <h3 id="_1-基本命令"><a href="#_1-基本命令" class="header-anchor">#</a> 1. 基本命令</h3> <p><strong>使用格式：</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>npx init <span class="token operator">&lt;</span>swaggerUrl<span class="token operator">&gt;</span>
+</code></pre></div><p><strong>案例：</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>npx init http://192.168.1.100:8080
+</code></pre></div><h3 id="_2-参数说明"><a href="#_2-参数说明" class="header-anchor">#</a> 2. 参数说明</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>必填</th> <th>默认值</th></tr></thead> <tbody><tr><td><code>swaggerUrl</code></td> <td>Swagger API 的基础 URL</td> <td>string</td> <td>✅</td> <td>—</td></tr></tbody></table> <h2 id="生成的文件结构"><a href="#生成的文件结构" class="header-anchor">#</a> 生成的文件结构</h2> <p>执行脚本后，会在默认目录下生成以下文件：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>src/api/
+├── modules/ <span class="token comment"># API 函数模块目录</span>
+│ ├── index.js <span class="token comment"># 模块导出入口文件</span>
+│ ├── UserApi.js <span class="token comment"># 用户相关 API 函数</span>
+│ ├── OrderApi.js <span class="token comment"># 订单相关 API 函数</span>
+│ └── <span class="token punctuation">..</span>. <span class="token comment"># 其他模块文件</span>
+└── swagger.js <span class="token comment"># API 路径映射文件</span>
+</code></pre></div><h2 id="执行流程"><a href="#执行流程" class="header-anchor">#</a> 执行流程</h2> <h3 id="_1-执行顺序"><a href="#_1-执行顺序" class="header-anchor">#</a> 1. 执行顺序</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>npx init http://your-api-domain
+</code></pre></div><p>执行流程：</p> <ol><li><strong>�� 执行 swagger 脚本</strong>：运行 api.js，生成 API 函数文件</li> <li><strong>🔧 执行 接口 脚本</strong>：运行 run.js，生成路径映射文件</li> <li><strong>�� 完成</strong>：所有文件生成完成</li></ol> <h3 id="_2-执行状态"><a href="#_2-执行状态" class="header-anchor">#</a> 2. 执行状态</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>📝 正在执行 swagger 脚本<span class="token punctuation">..</span>.
+✅ swagger脚本执行完成
+�� 正在执行 接口 脚本<span class="token punctuation">..</span>.
+✅ 接口 脚本执行完成
+�� 所有脚本执行完成！
+</code></pre></div><h2 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h2> <h3 id="q-脚本执行失败怎么办"><a href="#q-脚本执行失败怎么办" class="header-anchor">#</a> Q: 脚本执行失败怎么办？</h3> <p>A: 检查以下几点：</p> <ol><li>确保 Swagger URL 可访问</li> <li>检查网络连接</li> <li>确保已安装 <code>swagger-client</code> 依赖</li> <li>检查输出目录是否有写入权限</li> <li>确保 Swagger JSON 格式正确</li></ol> <h3 id="q-如何只生成部分文件"><a href="#q-如何只生成部分文件" class="header-anchor">#</a> Q: 如何只生成部分文件？</h3> <p>A: 使用单独的脚本：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 只生成 API 函数文件</span>
+npx api http://your-api-domain
+
+<span class="token comment"># 只生成路径映射文件</span>
+npx run http://your-api-domain
+</code></pre></div><h3 id="q-如何自定义输出路径"><a href="#q-如何自定义输出路径" class="header-anchor">#</a> Q: 如何自定义输出路径？</h3> <p>A: init.js 使用默认路径，如需自定义请使用单独的脚本：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 自定义 API 函数输出路径</span>
+npx api http://your-api-domain ./src/api/custom
+
+<span class="token comment"># 自定义路径映射输出路径</span>
+npx run http://your-api-domain ./src/api/custom/swagger.js
+</code></pre></div><h2 id="最佳实践"><a href="#最佳实践" class="header-anchor">#</a> 最佳实践</h2> <ol><li><strong>定期更新</strong>：API 变更后及时重新生成文件</li> <li><strong>版本管理</strong>：为不同环境生成不同的 API 文件</li> <li><strong>文档同步</strong>：确保 Swagger 文档与实际 API 一致</li> <li><strong>类型安全</strong>：充分利用 JSDoc 提供的类型提示</li> <li><strong>错误处理</strong>：在使用 API 时添加适当的错误处理</li> <li><strong>性能优化</strong>：合理使用缓存和请求合并</li></ol> <h2 id="与其他脚本的区别"><a href="#与其他脚本的区别" class="header-anchor">#</a> 与其他脚本的区别</h2> <table><thead><tr><th>特性</th> <th>init.js</th> <th>api.js</th> <th>run.js</th></tr></thead> <tbody><tr><td><strong>功能</strong></td> <td>组合执行两个脚本</td> <td>生成 API 函数</td> <td>生成路径映射</td></tr> <tr><td><strong>输出</strong></td> <td>完整的 API 文件集</td> <td>可调用的函数</td> <td>URL 字符串对象</td></tr> <tr><td><strong>复杂度</strong></td> <td>中等（组合脚本）</td> <td>高（完整请求处理）</td> <td>低（简单路径映射）</td></tr> <tr><td><strong>适用场景</strong></td> <td>完整项目初始化</td> <td>业务逻辑调用</td> <td>组件内部使用</td></tr> <tr><td><strong>自定义</strong></td> <td>不支持自定义路径</td> <td>支持自定义路径</td> <td>支持自定义路径</td></tr></tbody></table> <h2 id="相关链接"><a href="#相关链接" class="header-anchor">#</a> 相关链接</h2> <ul><li><a href="https://github.com/time202051/base-component" target="_blank" rel="noopener noreferrer">ol-base-components 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="/script/api">API 脚本 - api.js</a> - 生成完整的 API 函数文件</li> <li><a href="/script/run">API 脚本 - run.js</a> - 生成 API 路径映射文件</li> <li><a href="https://swagger.io/docs/" target="_blank" rel="noopener noreferrer">Swagger 官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <hr> <p><strong>通过 init.js 脚本，你可以一键生成完整的 API 文件集，快速搭建项目基础！</strong> 🚀</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">12/15/2025, 8:01:28 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/script/run.html" class="prev">
+        run
+      </a></span> <span class="next"><a href="/script/add.html">
+        add
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2c661504.js" defer></script><script src="/assets/js/2.81c34002.js" defer></script><script src="/assets/js/1.9918cdf1.js" defer></script><script src="/assets/js/33.0c62d11b.js" defer></script>
+  </body>
+</html>
