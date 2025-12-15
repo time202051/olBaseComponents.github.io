@@ -4,6 +4,7 @@ module.exports = {
     "基于 Element-UI 的高效表格、表单、搜索、弹框等通用组件，支持 Swagger 自动生成表头，npx 脚本一键生成 API",
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
   // GitHub Pages project site needs repo name as base to serve assets correctly
+  base: "/olBaseComponents.github.io/",
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
